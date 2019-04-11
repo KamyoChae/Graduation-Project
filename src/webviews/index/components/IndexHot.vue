@@ -1,6 +1,8 @@
 <template>
+<div class="wrapper">
+    
+</div>
 
-<h1>565645</h1>
 </template>
 
 <script>
