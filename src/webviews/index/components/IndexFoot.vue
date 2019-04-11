@@ -4,7 +4,7 @@
         <span>首页</span>
         <span>发布</span>
         <span>搜索</span>
-        <span>个人</span> 
+        <router-link tag="span" to="/User">个人</router-link> 
     </div>
 </div>
 
