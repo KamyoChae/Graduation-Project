@@ -44,7 +44,7 @@ export default {
     width 100%
     background #fff
     overflow hidden
-    
+    margin-top 3em
     .item
         position relative
         box-sizing border-box

@@ -15,6 +15,9 @@ export default {
 
 <style lang='stylus' scoped>
 .wrapper
+    position fixed
+    top 0
+    z-index 9
     width 100vw
     box-sizing border-box 
     line-height 3em
