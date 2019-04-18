@@ -13,6 +13,10 @@ exports.assetsPath = function (_path) {
 }
 
 exports.cssLoaders = function (options) {
+  const stylusOptions = {
+    'resolve url': true
+  }
+  
   options = options || {}
 
   const cssLoader = {
@@ -61,9 +65,11 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
-    stylus: generateLoaders('stylus'),
-    styl: generateLoaders('stylus')
-  }
+    
+    stylus: generateLoaders('stylus', stylusOptions),
+    styl: generateLoaders('stylus', stylusOptions)
+  } 
+  
 }
 
 // Generate loaders for standalone style files (outside of .vue)

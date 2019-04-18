@@ -1,18 +1,42 @@
 <template>
-<div class="wrapper">
-    <div class="foot">
-        <span>首页</span>
-        <span>发布</span>
-        <span>搜索</span>
-        <router-link tag="span" to="/User">个人</router-link> 
-    </div>
-</div>
+  <cube-tab-bar
+    v-model="selectedLabelDefault"
+    :data="tabs"
+    @click="clickHandler"
+    @change="changeHandler">
+  </cube-tab-bar>
 
 </template>
 
 <script>
 export default {
-
+data () {
+    return {
+      selectedLabelDefault: 'Vip',
+      tabs: [{
+        label: 'Home',
+        icon: 'cubeic-home'
+      }, {
+        label: 'Like',
+        icon: 'cubeic-like'
+      }, {
+        label: 'Vip',
+        icon: 'cubeic-vip'
+      }, {
+        label: 'Me',
+        icon: 'cubeic-person'
+      }]
+    }
+  },
+  methods: {
+    clickHandler (label) {
+      // if you clicked home tab, then print 'Home'
+      console.log(label)
+    },
+    changeHandler (label) {
+      // if you clicked different tab, this methods can be emitted
+    }
+  }
 }
 </script>
 
